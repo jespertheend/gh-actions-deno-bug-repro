@@ -3,6 +3,9 @@ on:
   push:
     branches: [main]
 
+env:
+  DENO_DIR: deno_dir
+
 jobs:
   bug:
     runs-on: ubuntu-latest
