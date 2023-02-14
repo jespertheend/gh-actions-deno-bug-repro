@@ -1,0 +1,19 @@
+name: bug
+on:
+  push:
+    branches: [main]
+
+jobs:
+  bug:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Setup repo
+          uses: actions/checkout@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7
+
+        - name: Setup Deno
+          uses: denoland/setup-deno@9db7f66e8e16b5699a514448ce994936c63f0d54
+          with:
+            deno-version: "1.30.2"
+
+        - name: Run it
+          run: deno run -A bug.js
