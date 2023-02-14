@@ -16,4 +16,4 @@ jobs:
             deno-version: "1.30.2"
 
         - name: Run it
-          run: deno run -A bug.js
+          run: deno run -A --unstable bug.js
