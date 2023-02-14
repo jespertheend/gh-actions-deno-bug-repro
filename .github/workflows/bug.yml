@@ -24,7 +24,7 @@ jobs:
         - name: Tar results
           if: always()
           run: |
-            tar -czf ../../artifact.tar *
+            tar -czf artifact.tar *
 
         - name: Artifact
           if: always()
