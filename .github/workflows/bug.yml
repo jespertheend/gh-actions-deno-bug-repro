@@ -22,6 +22,7 @@ jobs:
           run: deno run -A --unstable bug.js
 
         - name: Tar results
+          if: always()
           run: |
             tar -czf ../../artifact.tar *
 
